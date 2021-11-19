@@ -1,0 +1,94 @@
+﻿<Page x:Class="AmonicSession1.Pages.AdminPages.AdminMenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AmonicSession1.Pages.AdminPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AMONIC Airlines Automation System">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Menu Padding="5">
+            <MenuItem Header="Add user"
+                      x:Name="MenuAdd"
+                      Click="MenuAdd_Click"/>
+            <MenuItem Header="Exit"
+                      x:Name="MenuExit"
+                      Click="MenuExit_Click"/>
+        </Menu>
+
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal"
+                    Margin="10">
+
+            <TextBlock Text="Office: "/>
+            <ComboBox x:Name="ComboOffice"
+                      DisplayMemberPath="Title"
+                      Width="200"
+                      VerticalAlignment="Center"
+                      SelectedIndex="0"
+                      SelectionChanged="ComboOffice_SelectionChanged"/>
+
+        </StackPanel>
+
+        <DataGrid Grid.Row="2"
+                  AutoGenerateColumns="false"
+                  IsReadOnly="True"
+                  Margin="10"
+                  x:Name="GridUsers"
+                  LoadingRow="GridUsers_LoadingRow">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name"
+                                    Width="*"
+                                    Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Last Name"
+                                    Width="*"
+                                    Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="Age"
+                                    Width="0.5*"
+                                    Binding="{Binding Age}"/>
+                <DataGridTextColumn Header="User Role"
+                                    Width="*"
+                                    Binding="{Binding Roles.Title}"/>
+                <DataGridTextColumn Header="Email Address"
+                                    Width="2*"
+                                    Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="Offices"
+                                    Width="*"
+                                    Binding="{Binding Offices.Title}"/>
+            </DataGrid.Columns>
+            
+        </DataGrid>
+
+        <WrapPanel Grid.Row="3"
+                   Orientation="Horizontal"
+                   Margin="10">
+
+            <Button x:Name="BtnChange"
+                    Content="Change Role"
+                    Click="BtnChange_Click"
+                    Style="{StaticResource BlueButton}"
+                    Width="200"
+                    Margin="10"/>
+
+            <Button x:Name="BtnLogin"
+                    Content="Disable/Enable Login"
+                    Click="BtnLogin_Click"
+                    Style="{StaticResource OrangeButton}"
+                    Width="200"
+                    Margin="10"/>
+
+        </WrapPanel>
+        
+    </Grid>
+</Page>
