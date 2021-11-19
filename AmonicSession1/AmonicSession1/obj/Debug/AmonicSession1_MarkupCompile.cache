@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\C#\Amonic\AmonicSession1\AmonicSession1\obj\Debug\
+C:\C#\Amonic\AmonicAirlines\AmonicSession1\AmonicSession1\obj\Debug\
 AmonicSession1
 none
 false
 DEBUG;TRACE
-C:\C#\Amonic\AmonicSession1\AmonicSession1\App.xaml
+C:\C#\Amonic\AmonicAirlines\AmonicSession1\AmonicSession1\App.xaml
 6435526590
 21832530685
-19901581469
-18-1440775341
+181743940836
+1894820699
 MainWindow.xaml;Pages\AdminPages\AdminMenuPage.xaml;Pages\LoginPage.xaml;Styles\ButtonStyles.xaml;Styles\Colors.xaml;Styles\TextBlockStyles.xaml;
 
-True
+False
 
